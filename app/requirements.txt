@@ -1,0 +1,5 @@
+numpy==1.17.*
+pandas==0.25.*
+prevedere-api
+statsmodels==0.10.*
+dash==1.7.*
