@@ -4,7 +4,6 @@ FROM python:3.7-slim-buster
 WORKDIR /usr/src/dash
 
 ENV TINI_VERSION v0.18.0
-ENV FLASK_APP ./app.py
 
 # Install requirements
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
