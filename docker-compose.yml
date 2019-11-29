@@ -3,8 +3,8 @@ version: '3'
 services:
   web:
     build: 
-      context: ./app
+      context: ./dash
     volumes:
-      - ./app/:/usr/src/app/
+      - ./dash/:/usr/src/dash/
     ports:
       - 8050:8050
