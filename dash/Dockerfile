@@ -7,8 +7,8 @@ ENV TINI_VERSION v0.18.0
 
 # Install requirements
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-COPY ./requirements.txt /usr/src/dash/requirements.txt
-RUN pip install -r /usr/src/dash/requirements.txt \
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt \
     && chmod +x /tini
 
 # copy project
