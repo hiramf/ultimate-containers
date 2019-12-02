@@ -8,3 +8,5 @@ services:
       - ./dash/:/usr/src/dash/
     ports:
       - 8050:8050
+    environment:
+      - DEBUG
