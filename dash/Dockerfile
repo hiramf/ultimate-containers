@@ -1,4 +1,4 @@
-FROM python:3.7-slim-buster
+FROM python:3.7-slim-buster as base
 
 # set work directory
 WORKDIR /usr/src/dash
@@ -10,6 +10,8 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 COPY ./requirements.txt ./requirements.txt
 RUN pip install -r ./requirements.txt \
     && chmod +x /tini
+
+FROM base
 
 # copy project
 COPY . /usr/src/dash
